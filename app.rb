@@ -20,8 +20,15 @@ get '/fishing' do
   "Tuna"
 end
 
-get '/cat' do
+get '/random-cat' do
   @name = ["Chauncy", "Secil", "Berty"].sample
   erb(:index)
 end
+
+get '/named-cat' do 
+  p params
+  @name = params[:name]
+  erb(:index)
+end 
+
 
