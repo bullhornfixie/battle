@@ -21,6 +21,7 @@ get '/fishing' do
 end
 
 get '/cat' do
- erb(:index)
+  @name = ["Chauncy", "Secil", "Berty"].sample
+  erb(:index)
 end
 
