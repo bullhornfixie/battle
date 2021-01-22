@@ -33,9 +33,9 @@ post '/named-cat' do
   p params
   @name = params[:name]
   erb(:index)
-end 
+end
 
-# testing 
+# testing2
 
 
 
