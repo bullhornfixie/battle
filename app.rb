@@ -1,23 +1,15 @@
 require 'sinatra'
+# http://localhost:4567/
+
+set :session_secret, 'super secret'
+# https://groups.google.com/g/sinatrarb/c/pUFSoyQXyQs
 
 get '/' do
-  "Hello World"
+  "hello!"
 end
 
 get '/secret' do
-  "Welcome to Narnia"
-end
-
-get '/beach' do 
-  "Palm tree"
-end 
-
-get '/journey' do 
-  "OZ"
-end
-
-get '/fishing' do
-  "Tuna"
+  "narnia"
 end
 
 get '/random-cat' do
