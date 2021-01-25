@@ -1,28 +1,13 @@
-require 'sinatra'
-# http://localhost:4567/
+require 'sinatra/base'
 
-set :session_secret, 'super secret'
-# https://groups.google.com/g/sinatrarb/c/pUFSoyQXyQs
+class Battle < Sinatra::Base 
+  get '/' do
+    "hello!"
+  end
 
-get '/' do
-  "hello!"
+  run! if app_file == $0
+  # launches server if ruby file executed directly 
 end
-
-get '/random-cat' do
-  @name = ["Chauncy", "Secil", "Berty"].sample
-  erb(:index)
-end
-
-get '/cat-form' do 
-  erb :cat_form
-end 
-
-post '/named-cat' do 
-  p params
-  @name = params[:name]
-  erb(:index)
-end
-
 
 
 
