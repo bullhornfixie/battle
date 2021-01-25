@@ -8,10 +8,6 @@ get '/' do
   "hello!"
 end
 
-get '/secret' do
-  "narnia"
-end
-
 get '/random-cat' do
   @name = ["Chauncy", "Secil", "Berty"].sample
   erb(:index)
@@ -27,7 +23,6 @@ post '/named-cat' do
   erb(:index)
 end
 
-# testing4
 
 
 
